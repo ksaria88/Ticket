@@ -1,0 +1,87 @@
+<p-messages [(value)]="msgs"></p-messages>
+<p-toast key="tc"></p-toast>
+
+<div class="container">
+    <br />
+    <div class="col-md-12">
+        <div class="card">
+            <h5 class="card-header">Datos de la persona</h5>
+            <div class="card-body">
+                <div class="row g-12">
+                    <div class="col-md-4">
+                        <label for="">Id</label>
+                        <input type="text" class="form-control" id="" placeholder="Ingrese el id"
+                            [(ngModel)]="identificacion">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Nombre</label>
+                        <input type="text" class="form-control" id="" placeholder="Ingrese el nombre"
+                            [(ngModel)]="nombre">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary boton" (click)="grabarAtencion()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h5 class="card-header">Cola 1 espera 2 minutos. Personas: {{cola1.length}} - TIEMPO: <cd-timer
+                        #timerCola1 format="ms"></cd-timer>
+                </h5>
+                <div class="card-body">
+                 
+                    <p-carousel [value]="cola1" [numVisible]="3" [numScroll]="3" [circular]="false">
+                        <ng-template let-persona pTemplate="item">
+                            <div class="product-item">
+                                <div class="product-item-content">
+                                    <div class="mb-3">
+                                        <img src="../../assets/img/user.png" class="product-image" />
+                                    </div>
+                                    <div>
+                                        <h6 class="mt-0 mb-3">{{persona.nombre}}</h6>
+                                        <h6 class="mt-0 mb-3">{{persona.identificacion}}</h6>
+                                        <h6 class="mt-0 mb-3">Atención: {{persona.hora}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h5 class="card-header">Cola 2 espera 3 minutos. Personas: {{cola2.length}} - TIEMPO: <cd-timer
+                        #timerCola2 format="ms"></cd-timer>
+                </h5>
+                <div class="card-body">
+                  
+                    <p-carousel [value]="cola2" [numVisible]="3" [numScroll]="3" [circular]="false">
+                        <ng-template let-persona pTemplate="item">
+                            <div class="product-item">
+                                <div class="product-item-content">
+                                    <div class="mb-3">
+                                        <img src="../../assets/img/user2.png" class="product-image" />
+                                    </div>
+                                    <div>
+                                        <h6 class="mt-0 mb-3">{{persona.nombre}}</h6>
+                                        <h6 class="mt-0 mb-3">{{persona.identificacion}}</h6>
+                                        <h6 class="mt-0 mb-3">Atención: {{persona.hora}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
