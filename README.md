@@ -4,4 +4,4 @@
 3. Para ejecutar el aplicativo ejecutar npm i para la instalación de los paquetes necesarios.
 4. Ejecutar el comando dotnet restore para restaurar los paquetes en el back-end.
 5. Ejecutar el comando ng b --watch en una consola para iniciar el front-end.
-6. Ejecutar el comando dotnet run en una consola para iniciar el back-end
+6. Ejecutar el comando dotnet run en una consola para iniciar el back-end.
